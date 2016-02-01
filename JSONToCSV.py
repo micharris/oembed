@@ -3,7 +3,7 @@ import json
 import csv
 import datetime
 
-fileName = argv[0]
+fileName = sys.argv[1]
 
 rows = []
 i = 1
