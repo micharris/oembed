@@ -37,7 +37,7 @@ def convert_to_CSV():
 
 def write_CSV_File():
 	with open('responseTime.csv', 'w') as csvfile:
-	    fieldnames = ['endpoint', 'responseTime']
+	    fieldnames = ['date', 'endpoint', 'responseTime']
 	    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
 	    writer.writeheader()
