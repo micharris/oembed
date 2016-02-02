@@ -13,7 +13,7 @@ options = {
 initialize(**options)
  
 start = datetime.datetime.now() - datetime.timedelta(minutes=10)
-end = time.time()
+end = datetime.datetime.now()
 
 #system.load.1 = The average system load over one minute.
 query_cpu = 'system.cpu.idle{farm_role:cpt-oembed-web, environment:staging} by {host}' 
