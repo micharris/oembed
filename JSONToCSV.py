@@ -6,6 +6,7 @@ import datetime
 fileName = sys.argv[1]
 
 rows = []
+legend = []
 i = 1
 increment = 4 #time increment is approx evey 4 seconds for a 10 minute test (150 data points per datadog request)
 
@@ -17,9 +18,8 @@ for row in data["series"][0]["pointlist"]:
 
 time_stamp = data["series"][0]["start"]
 t = datetime.datetime.fromtimestamp(int(time_stamp/1000)).strftime('date_%m_%d_%H_%M')
-legend.append(t);
 
-header = ['time_stamp', legend[0]]
+header = ['time_stamp', t]
 with open(fileName+'.csv', 'wb') as f:
     writer = csv.writer(f)
     writer.writerow(header)
