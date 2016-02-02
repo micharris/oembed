@@ -9,7 +9,7 @@ rows = []
 i = 1
 increment = 4 #time increment is approx evey 4 seconds for a 10 minute test (150 data points per datadog request)
 
-with open(fileName+'.json') as data_file:    
+with open('/opt/tcagents/linuxtcagent/temp/agentTmp/'+fileName+'.json') as data_file:    
     data = json.load(data_file)
 
 for row in data["series"][0]["pointlist"]:
