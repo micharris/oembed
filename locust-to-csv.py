@@ -36,13 +36,13 @@ def convert_to_CSV():
 					print ''
 
 def write_CSV_File():
-	with open('responseTime.csv', 'w') as csvfile:
+	with open('responseTime.csv', 'wb') as csvfile:
 	    fieldnames = ['date', 'endpoint', 'responseTime']
-	    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+	    writer = csv.writer(csvfile)
 
-	    writer.writeheader()
+	    writer.writerow(fieldnames)
 	    for key, value in data.iteritems():
-	    	writer.writerow({'date': now.strftime("%Y-%m-%d-%H-%M"), 'endpoint': key, 'responseTime': value})
+	    	writer.writerow([now.strftime("%Y-%m-%d-%H-%M"), key, value])
 
 convert_to_CSV()
 write_CSV_File()
