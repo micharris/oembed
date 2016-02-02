@@ -19,12 +19,12 @@ end = round(time.time())
 query_cpu = 'system.cpu.idle{farm_role:cpt-oembed-web, environment:staging} by {host}' 
 results = api.Metric.query(start=start, end=end, query=query_cpu)
 
-with open('/opt/tcagents/tc_cs_agent/temp/agentTmp/cpu.json', 'w') as file_:
+with open('/opt/tcagents/linuxtcagent/temp/agentTmp/cpu.json', 'w') as file_:
     file_.write(json.dumps(results))
 
 #system.mem.used = The amount of RAM in use shown as byte
 query_memory = 'system.mem.used{farm_role:cpt-oembed-web, environment:staging} by {host}'
 results = api.Metric.query(start=start, end=end, query=query_memory)
 
-with open('/opt/tcagents/tc_cs_agent/temp/agentTmp/memory.json', 'w') as file_:
+with open('/opt/tcagents/linuxtcagent/temp/agentTmp//memory.json', 'w') as file_:
     file_.write(json.dumps(results))
