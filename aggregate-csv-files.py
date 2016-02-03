@@ -17,6 +17,8 @@ for dirname in os.walk(projectPath).next()[1]:
 #order the list from newest to oldest
 buildCount.reverse() 
 
+print buildCount
+
 i = 0
 
 #read all previous csv files and add rows to list
@@ -33,7 +35,7 @@ for buildNumber in buildCount:
             		pass
 
 #create aggregated CSV file
-with open('/opt/tcagents/linuxtcagent/temp/agentTmp/responseTimeAggregated.csv', 'wb') as outcsv:
+with open('/opt/tcagents/linuxtcagent/temp/agentTmp/responseTimeAggregated.csv', 'w') as outcsv:
     writer = csv.writer(outcsv)
     writer.writerow(["Date", "endpoint", "responseTime"])
     for row in csvRows:
