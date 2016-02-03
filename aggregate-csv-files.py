@@ -22,7 +22,7 @@ with open('responseTimeAggregated.csv', 'wb') as outcsv:
 for dirPath in directories:
     while i < 10:
         i = i + 1
-        with open(projectPath+'/'+csvfile, 'r') as fin, open('/opt/tcagents/tc_cs_agent/temp/agentTmp/responseTimeAggregated.csv', 'w') as fout:
+        with open('responseTime.csv', 'r') as fin, open('/opt/tcagents/tc_cs_agent/temp/agentTmp/responseTimeAggregated.csv', 'w') as fout:
             reader = csv.reader(fin)
             writer = csv.writer(fout)
             for row in reader:
