@@ -36,7 +36,7 @@ def convert_to_CSV():
 					print ''
 
 def write_CSV_File():
-	with open('responseTime.csv', 'wb') as csvfile:
+	with open('/opt/tcagents/linuxtcagent/temp/agentTmp/responseTime.csv', 'w') as csvfile:
 	    fieldnames = ['date', 'endpoint', 'responseTime']
 	    writer = csv.writer(csvfile)
 

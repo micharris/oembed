@@ -20,7 +20,7 @@ time_stamp = data["series"][0]["start"]
 t = datetime.datetime.fromtimestamp(int(time_stamp/1000)).strftime('date_%m_%d_%H_%M')
 
 header = ['time_stamp', t]
-with open(fileName+'.csv', 'wb') as f:
+with open('/opt/tcagents/linuxtcagent/temp/agentTmp/'+fileName+'.csv', 'wb') as f:
     writer = csv.writer(f)
     writer.writerow(header)
     for row in rows:
