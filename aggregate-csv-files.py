@@ -7,7 +7,7 @@ projectID = sys.argv[1] #%teamcity.project.id%
 buildConfName = sys.argv[2] #%system.teamcity.buildConfName%
 targetFile = sys.argv[3]
 projectPath = '/opt/teamcity/.BuildServer/system/artifacts/'+projectID+'/'+buildConfName+'/' #/opt/teamcity/.BuildServer/system/artifacts/LoadTest/StartLoadTest/
-projectPath = '/opt/teamcity/'
+projectPath = '/opt/teamcity/TeamCity'
 
 print projectPath
 
