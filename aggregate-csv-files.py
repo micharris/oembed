@@ -12,6 +12,7 @@ for dirname in os.walk(projectPath).next()[1]:
 #order the list from newest to oldest
 directories.reverse() 
 
+print directories
 i = 0
 
 #create aggregated CSV file with CSV headers
