@@ -30,3 +30,6 @@ results = api.Metric.query(start=start, end=end, query=query_memory)
 
 with open(path+'/memory.json', 'w') as file_:
     file_.write(json.dumps(results))
+
+print json.dumps(results)
+print path+'/memory.json'
